@@ -12,12 +12,12 @@
     
     <form method="post" action = "exer2resposta.php">
                         
-                        <div class="mb-3">
+                        <div class="row mb-3">
                             <label for="valor1" class="form-label">Informe o primeiro valor</label>
                             <input type="number" id="valor1" name="valor1" class="form-control">
                         </div>
                     
-                        <div class="mb-3">
+                        <div class="row mb-3">
                             <label for="valor2" class="form-label">Informe o segundo valor</label>
                             <input type="number" id="valor2" name="valor2" class="form-control">
                         </div>
@@ -25,9 +25,6 @@
                     <button type="submit" class="btn btn-primary">Enviar</button>
                 </form>
             
-
-
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
