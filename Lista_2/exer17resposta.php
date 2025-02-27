@@ -3,22 +3,22 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Resposta do Exercício 16</title>
+    <title>Resposta do Exercício 17</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
   <body>
-    <h1>Resposta do Exercício 16</h1>
+    <h1>Resposta do Exercício 17</h1>
 
     <?php
 
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             try {
-                $preco = $_POST['preco'];
-                $desconto = $_POST['desconto'];
-                $valorDesconto = $preco * ($desconto / 100);
-                $preco2 = $preco - $valorDesconto;
-                echo "O novo Preço (com desconto) é:  $preco2.";
+                $capital = $_POST['capital'];
+                $juros = $_POST['juros'];
+                $periodo = $_POST['periodo'];
+                $jurosSimples = $capital * ($juros / 100) * $periodo;
+                echo "O Calculo do Juros Simples é:  $jurosSimples.";
                 }
 
             catch(Exception $e) {  //ele armazema o erro - se existir  //$e é o pedacinho de memória que armazena o erro
