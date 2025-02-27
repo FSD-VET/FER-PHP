@@ -10,7 +10,7 @@
     <h1>Exercício 4 - Divisão com Verificação</h1>
 
     
-    <form method="post" action = "exer3resposta.php">
+    <form method="post" action = "exer4resposta.php">
                         
         <div class="mb-3">
             <label for="valor1" class="form-label">Informe o primeiro valor</label>

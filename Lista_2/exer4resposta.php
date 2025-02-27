@@ -11,7 +11,7 @@
 
     <?php
 
-        if ($_SERVER['RESQUEST_METHOD'] == 'POST') {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             try {
                 $valor1 = $_POST['valor1'];
