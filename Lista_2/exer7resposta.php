@@ -7,17 +7,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
   <body>
-    <h1>Resposta do Exercício 6</h1>
+    <h1>Resposta do Exercício 7</h1>
 
     <?php
 
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             try {
-                $celsius = $_POST['celsius'];
+                $fahr = $_POST['fahr'];
                 
-                $fahr = ($celsius * 9/5 ) + 32;
-                echo "A temperatura, em Fahrenheit é: $fahr ºF";
+                $celsius = ($fahr -32 ) * 5/9;
+                echo "A temperatura, em Celsius é: $celsius ºC";
                 }
 
             catch(Exception $e) {  //ele armazema o erro - se existir  //$e é o pedacinho de memória que armazena o erro

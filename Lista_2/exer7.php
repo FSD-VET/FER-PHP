@@ -7,25 +7,18 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
   <body>
-    <h1>Resposta do Exercício 6</h1>
+    <h1>Exercício 7 - Conversor2</h1>
 
-    <?php
-
-        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-
-            try {
-                $celsius = $_POST['celsius'];
-                
-                $fahr = ($celsius * 9/5 ) + 32;
-                echo "A temperatura, em Fahrenheit é: $fahr ºF";
-                }
-
-            catch(Exception $e) {  //ele armazema o erro - se existir  //$e é o pedacinho de memória que armazena o erro
-                echo $e->getMessage(); //exibe o erro
-            }
-        }
-
-    ?>
+    
+    <form method="post" action = "exer7resposta.php">
+                        
+        <div class="row mb-3">
+            <label for="fahr" class="form-label">Informe a Temperatura em Fahernheit</label>
+            <input type="number" id="fahr" name="fahr" class="form-control">
+        </div>
+                    
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>       
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
