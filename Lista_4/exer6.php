@@ -3,34 +3,24 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Lista 4 - Exercício 4 (Dia/Mês/Ano)</title>
+    <title>Lista 4 - Exercício 6 (Arrendodando Valor)</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
   <body>
 
  
-    <h1><center>Lista 4 - Exercício 4 (Dia/Mês/Ano)<center></h1><br>
+    <h1><center>Lista 4 - Exercício 6 (Arrendodando Valor)<center></h1><br>
 
 
 
-    <form method="post" action = "exer4resposta.php">
+    <form method="post" action = "exer6resposta.php">
         
     <main class="container mt-3">
             
                         
     <div class="row mb-3">
-            <label for="data1" class="form-label">Informe o Dia (dd)</label>
-            <input type="text" id="data1" name="data1" class="form-control" required><br><br>
-        </div>
-
-        <div class="row mb-3">
-            <label for="mes" class="form-label">Informe o Mês (mm)</label>
-            <input type="number" id="mes" name="mes" class="form-control" required><br><br>
-        </div>
-
-        <div class="row mb-3">
-            <label for="ano" class="form-label">Informe o Ano (YYYY)</label>
-            <input type="number" id="ano" name="ano" class="form-control" required><br><br>
+            <label for="valor" class="form-label">Informe um valor de ponto flutuante (ex. 15,45 ou 1545e-2)</label>
+            <input type="number" id="valor" name="valor" class="form-control" step= "0.01" inputmode="decimal" required><br><br>
         </div>
                     
                          
