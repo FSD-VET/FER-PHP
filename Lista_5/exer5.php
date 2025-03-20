@@ -3,34 +3,34 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Lista 5 - Exercício 4</title>
+    <title>Lista 5 - Exercício 5</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
   <body>
 
  
-    <h1><center>Lista 5 - Exercício 4<center></h1><br>
+    <h1><center>Lista 5 - Exercício 5<center></h1><br>
 
 
-    <h1><center>Cadastro de Itens<center></h1><br>
+    <h1><center>Cadastro de Livros<center></h1><br>
 
 
     
-    <form action="exer4resposta.php" method="POST"> 
+    <form action="exer5resposta.php" method="POST"> 
 
     <main class="container mt-3">
 
         <?php for($i=0; $i<5;$i++): ?>
 
             <div class="mb-3">
-                <label for="nome[]" class="form-label">Informe o Nome do Item: </label>
+                <label for="nome[]" class="form-label">Informe o Titulo do Livro: </label>
                 <input type="text" name="nome[]"/>
             </div>
             <br/>
 
             <div class="mb-3">
-                <label for="preco[]" class="form-label">Informe o preço do Item: </label>
-                <input type="number" step="0.01" name="preco[]" />
+                <label for="qtde[]" class="form-label">Informe quantidade de Livros no estoque: </label>
+                <input type="number" step="1" name="qtde[]" />
             </div>
             <br/>
         

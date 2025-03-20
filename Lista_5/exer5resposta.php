@@ -7,11 +7,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Lista 5 - Exercício 4</title>
+    <title>Lista 5 - Exercício 5</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
   <body>
-    <h1>Lista 5 - Exercício 4</h1>
+    <h1>Lista 5 - Exercício 5</h1>
     <br>
     <br>
 
@@ -22,33 +22,40 @@
     
         try { //verificando as informações do formulario - enviadas
 
-            $itens = array();//inicia um array para armazenar os produtos
+            $livros = array();//inicia um array para armazenar os produtos
                 
             $nomes = $_POST['nome']; 
-            $preco = $_POST['preco'];
+            $qtdes = $_POST['qtde'];
+
+            //echo "<pre>";
+            //print_r($qtdes); // Exibe os valores das quantidades recebidas
+            //echo "</pre>";
     
             for ($i = 0; $i < 5; $i++) {//loop para os 5 produtos
                     //array para cada produto - armazenando cada informação com o seu produto
                 $nome = $nomes[$i];
-                $novoPreco = floatval($preco[$i]);
+                $qtde = (int) $qtdes[$i];
 
-                // Aplica o imposto de 15% no preço
-                $novoPreco = $novoPreco * 1.15;
-                $itens[$nome] = $novoPreco;
+                //echo "Nome: $nome - Quantidade: $qtde<br>"; teste que leitura
+
+                $livros[$nome] = $qtde;
 
                 }
 
-                asort($itens);
+                ksort($livros);
 
-                echo "<h2>Lista de Itens</h2>";
+                echo "<h2>Lista de livros</h2>";
                 echo "<ul>";
-                foreach ($itens as $nome => $novoPreco) {//exibe os dados de cada produto
-                    echo "<li><strong>" . $nome . "</strong>:  Preço: R$ " . number_format($novoPreco, 2, ',', '.') . "</li>";
+                foreach ($livros as $nome => $qtde) {//exibe os dados de cada produto
+                    if ($qtde < 5) {
+                        echo "<li><strong>Título: " . $nome . " --  Estoque baixo!!</strong> ($qtde unidades em estoque) </li>";
+                    }
+                    else {
+                        echo "<li><strong>Título: " . $nome . "</strong>:  $qtde unidades em estoque </li>";
+                    }
                 }
                 echo "</ul>";
             }
-
-         
 
         catch(Exception $e) {  //ele armazema o erro - se existir  //$e é o pedacinho de memória que armazena o erro
             echo $e->getMessage(); //exibe o erro
