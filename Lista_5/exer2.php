@@ -19,7 +19,7 @@
     <form action="exer2resposta.php" method="POST"> 
 
     <main class="container mt-3">
-[]
+
         <?php for($i=0; $i<5;$i++): ?>
 
             <div class="mb-3">
