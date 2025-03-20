@@ -42,7 +42,7 @@
 
                 }
 
-                ksort($livros);
+                ksort($livros);//ordena um array associativo pelas chaves - titulos (não pelos valores)
 
                 echo "<h2>Lista de livros</h2>";
                 echo "<ul>";

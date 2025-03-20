@@ -28,7 +28,7 @@
             $preco = $_POST['preco'];
     
             for ($i = 0; $i < 5; $i++) {//loop para os 5 produtos
-                    //array para cada produto - armazenando cada informação com o seu produto
+                    //array para cada item - armazenando cada informação com o seu item
                 $nome = $nomes[$i];
                 $novoPreco = floatval($preco[$i]);
 
@@ -38,7 +38,7 @@
 
                 }
 
-                asort($itens);
+                asort($itens);//ordem crescente de acordo com os valores
 
                 echo "<h2>Lista de Itens</h2>";
                 echo "<ul>";
