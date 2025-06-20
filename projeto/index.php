@@ -12,13 +12,18 @@
 
         <?php
 
+        require_once('conexao.php');
+
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
             try {
                 $email = $_POST['email'];
                 $senha = $_POST['senha'];
-                if (($email == "adm@adm.com") && ($senha == "123")) {
+                $stmt = $pdo->prepare('SELECT * FROM usuarios WHERE email = ?');
+                $stmt->execute([$email]);
+                $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
+                if ($usuario && password_verify($senha, $usuario['senha'])) {
                     session_start();
-                    $_SESSION['usuario'] = $email;
+                    $_SESSION['usuario'] = $usuario['nome'];
                     $_SESSION['acesso'] = true;
                     header('location: principal.php');
                 } 
@@ -73,6 +78,11 @@
                     <button type="submit" class="btn btn-primary mt-3">Acessar</button>
                 </div>
             </div>
+
+            <div class="row">
+                <div class="col">
+                    Não possui acesso? Clique <a href="novo_usuario.php">aqui</a>
+                </div>
         </form>
    
       
